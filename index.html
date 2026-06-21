@@ -17,15 +17,15 @@
     <div>
       <span class="kicker">Um pequeno projeto de família</span>
       <h1>O Mundo Pelos Olhos do Joãozinho <span class="heart">❤️</span></h1>
-     <audio id="musica" loop playsinline>
-<source src="musica.mp3" type="audio/mpeg">
+     <audio id="musica" loop>
+<source src="musica.mp3">
 </audio>
 
       <p>Um menino de 5 anos, alguns lápis de cor e uma forma muito especial de enxergar o mundo.</p>
       <a class="btn" href="#historia">Conhecer a história</a>
       <a class="btn secondary" href="#contribuir">Contribuir com o projeto</a>
- <div style="margin-top:90px;text-align:center;width:100%;">
-<button onclick="tocarMusica()" style="background:none;border:none;color:#777;font-size:16px;cursor:pointer;">
+<div style="margin-top:90px;text-align:center;width:100%;">
+<button onclick="document.getElementById('musica').play()" style="background:none;border:none;color:#777;font-size:16px;cursor:pointer;">
 🎵 Ouvir música instrumental
 </button>
 </div>
