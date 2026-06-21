@@ -40,9 +40,6 @@
 <label>Seu nome</label>
 <input type="text" id="nome" placeholder="Digite seu nome" required>
 
-<label>Seu WhatsApp</label>
-<input type="text" id="whatsapp" placeholder="Digite seu WhatsApp" required>
-
 <label>Mensagem para o Joãozinho ❤️</label>
 <textarea id="mensagem" placeholder="Escreva uma mensagem, se quiser."></textarea>
 
@@ -53,6 +50,22 @@ RECEBER OS DESENHOS ❤️
 </form>
 
 <script>
+function enviarWhatsApp() {
+  var nome = document.getElementById("nome").value;
+  var mensagem = document.getElementById("mensagem").value;
+
+  var texto =
+  "Olá Anderson!%0A%0A" +
+  "Meu nome é " + nome + ".%0A%0A" +
+  "Gostaria de receber os desenhos do Joãozinho ❤️%0A%0A" +
+  "Mensagem: " + mensagem;
+
+  window.open(
+  "https://wa.me/5551992668360?text=" + texto,
+  "_blank"
+  );
+}
+</script>
 
 function enviarWhatsApp() {
 
