@@ -5,293 +5,303 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>O Mundo Pelos Olhos do Joãozinho</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #fffaf2;
+      --card: #ffffff;
+      --cream: #fff1d8;
+      --soft: #f7ead7;
+      --text: #3f2d24;
+      --muted: #7d6758;
+      --gold: #c89245;
+      --rose: #f5d8cc;
+      --line: #ead8bd;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Nunito', sans-serif;
-      background: #fff8ec;
-      color: #3b2a1f;
-      line-height: 1.7;
+      font-family: "Nunito", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
 
     section {
-      padding: 70px 22px;
+      padding: 52px 18px;
     }
 
-    .container {
-      max-width: 980px;
+    .wrap {
+      max-width: 760px;
       margin: 0 auto;
     }
 
     .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(45, 25, 12, .35), rgba(45, 25, 12, .55)),
-        url("banana-joao.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: flex-end;
-      padding: 40px 22px 70px;
-      color: white;
+      padding: 18px 16px 58px;
+      text-align: center;
+      background: linear-gradient(180deg, #fff2dc 0%, #fffaf2 100%);
     }
 
-    .hero-content {
-      max-width: 850px;
-      margin: 0 auto;
-      text-align: left;
+    .hero-img {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(70, 45, 30, .13);
+      margin-bottom: 30px;
     }
 
-    .tag {
+    .badge {
       display: inline-block;
-      background: #fff4d6;
-      color: #7a3e22;
+      background: #fff;
+      color: var(--gold);
+      font-weight: 900;
       padding: 8px 16px;
       border-radius: 999px;
-      font-weight: 900;
+      font-size: .86rem;
+      box-shadow: 0 8px 22px rgba(70, 45, 30, .08);
       margin-bottom: 18px;
     }
 
     h1, h2, h3 {
-      font-family: 'Baloo 2', cursive;
-      line-height: 1.05;
+      font-family: "Fraunces", serif;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 8vw, 5.8rem);
-      margin-bottom: 12px;
+      font-size: clamp(2.45rem, 11vw, 4.4rem);
+      margin-bottom: 10px;
     }
 
-    .hero h2 {
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      color: #ffe08a;
-      margin-bottom: 20px;
+    .subtitle {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.7rem, 8vw, 3rem);
+      color: var(--gold);
+      margin-bottom: 22px;
+      line-height: 1.1;
     }
 
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 720px;
-      font-weight: 700;
-    }
-
-    .light {
-      background: #fff8ec;
-    }
-
-    .white {
-      background: white;
-    }
-
-    .warm {
-      background: #fff0cf;
-    }
-
-    .dark {
-      background: #6b351e;
-      color: white;
-    }
-
-    .section-title {
-      font-size: clamp(2.1rem, 6vw, 3.5rem);
-      color: #7a3e22;
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .dark .section-title {
-      color: #ffe08a;
-    }
-
-    .text {
-      max-width: 760px;
-      margin: 0 auto 22px;
-      font-size: 1.16rem;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .photo-card {
-      margin: 36px auto;
-      max-width: 760px;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0,0,0,.18);
-      background: white;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .quote {
-      font-size: 1.55rem;
-      font-weight: 900;
-      color: #7a3e22;
-      text-align: center;
-      max-width: 820px;
-      margin: 35px auto;
-      line-height: 1.35;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 35px;
-    }
-
-    .gallery-item {
-      background: white;
-      border-radius: 24px;
-      padding: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 18px;
-    }
-
-    .gallery-item p {
-      padding: 12px 5px 4px;
-      font-weight: 900;
-      color: #7a3e22;
-      text-align: center;
-    }
-
-    .audio-list {
-      max-width: 760px;
-      margin: 35px auto;
-      background: white;
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 14px 35px rgba(0,0,0,.12);
-    }
-
-    .audio-list h3 {
-      color: #e8793e;
-      font-size: 2rem;
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .audio-list div {
-      padding: 13px 0;
-      border-bottom: 1px dashed #e8c9a0;
-      font-size: 1.12rem;
-      font-weight: 800;
-    }
-
-    .audio-list div:last-child {
-      border-bottom: none;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 35px;
-    }
-
-    .benefit {
-      background: #fff8ec;
-      border-radius: 24px;
-      padding: 24px;
-      text-align: center;
-      font-weight: 800;
-      box-shadow: 0 8px 22px rgba(0,0,0,.06);
-    }
-
-    .price-box {
-      background: white;
-      color: #3b2a1f;
-      max-width: 760px;
-      margin: 38px auto 0;
-      padding: 34px 24px;
-      border-radius: 32px;
-      text-align: center;
-      box-shadow: 0 18px 45px rgba(0,0,0,.22);
-    }
-
-    .price {
-      display: inline-block;
-      background: #e8793e;
-      color: white;
-      font-size: 2.2rem;
-      font-weight: 900;
-      padding: 12px 30px;
-      border-radius: 18px;
-      margin: 20px 0;
-    }
-
-    .checkout {
-      margin-top: 25px;
-      padding: 26px;
-      border: 2px dashed #e8793e;
-      border-radius: 22px;
-      background: #fff8ec;
-      color: #7a3e22;
-      font-weight: 900;
+    .lead {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 620px;
+      margin: 0 auto 24px;
     }
 
     .btn {
       display: inline-block;
-      background: #7a3e22;
-      color: white;
+      background: var(--text);
+      color: #fff;
       text-decoration: none;
-      padding: 17px 28px;
+      padding: 15px 24px;
       border-radius: 999px;
-      font-size: 1.1rem;
       font-weight: 900;
-      margin-top: 18px;
-      box-shadow: 0 12px 25px rgba(0,0,0,.18);
+      box-shadow: 0 12px 28px rgba(63,45,36,.18);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(234,216,189,.75);
+      border-radius: 30px;
+      padding: 30px 22px;
+      box-shadow: 0 14px 36px rgba(70, 45, 30, .06);
+    }
+
+    .title {
+      text-align: center;
+      font-size: clamp(2rem, 8vw, 3rem);
+      margin-bottom: 24px;
+    }
+
+    .text {
+      color: var(--muted);
+      font-size: 1.07rem;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      font-family: "Fraunces", serif;
+      color: var(--text);
+      font-size: clamp(1.45rem, 6vw, 2.2rem);
+      line-height: 1.25;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .soft {
+      background: var(--cream);
+    }
+
+    .rose {
+      background: #fff3ee;
+    }
+
+    .green {
+      background: #f4f8ef;
+    }
+
+    .photo {
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 16px 38px rgba(70,45,30,.1);
+      margin: 26px 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .art {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(70,45,30,.07);
+    }
+
+    .art img {
+      height: 165px;
+      object-fit: cover;
+    }
+
+    .art p {
+      font-size: .88rem;
+      font-weight: 900;
+      text-align: center;
+      padding: 10px 8px;
+      line-height: 1.25;
+    }
+
+    .audio-box {
+      background: #fff;
+      border-radius: 28px;
+      padding: 24px 18px;
+      box-shadow: 0 14px 36px rgba(70,45,30,.08);
+      margin: 26px 0;
+    }
+
+    .audio-box h3 {
+      text-align: center;
+      font-size: 1.85rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .audio-item {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 800;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .audio-item:last-child {
+      border-bottom: 0;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .benefit {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .price-card {
+      background: #fff;
+      border-radius: 32px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 18px 44px rgba(70,45,30,.1);
+      border: 1px solid var(--line);
+    }
+
+    .price {
+      font-family: "Fraunces", serif;
+      color: var(--gold);
+      font-size: 3.4rem;
+      line-height: 1;
+      margin: 10px 0 8px;
+    }
+
+    .checkout {
+      margin-top: 24px;
+      padding: 22px;
+      background: #fff8ea;
+      border: 2px dashed var(--gold);
+      border-radius: 22px;
+      font-weight: 900;
+      color: var(--text);
     }
 
     .final {
       text-align: center;
-      background: #fff8ec;
+      background: linear-gradient(180deg, #fffaf2 0%, #fff0d6 100%);
     }
 
     .final p {
-      max-width: 760px;
-      margin: 0 auto 18px;
-      font-size: 1.2rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 16px;
     }
 
     footer {
-      background: #3b2a1f;
-      color: #fff0cf;
+      background: var(--text);
+      color: #fff4df;
       text-align: center;
-      padding: 28px 18px;
+      padding: 24px 16px;
       font-weight: 800;
+      font-size: .92rem;
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 720px) {
       section {
-        padding: 55px 18px;
+        padding: 78px 24px;
       }
 
       .hero {
-        padding-bottom: 45px;
+        padding: 34px 24px 82px;
       }
 
-      .gallery-item img {
-        height: 230px;
+      .card {
+        padding: 46px 42px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .art img {
+        height: 210px;
+      }
+
+      .benefits {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   </style>
@@ -300,347 +310,175 @@
 <body>
 
   <header class="hero">
-    <div class="hero-content">
-      <span class="tag">Áudios Books + PDF</span>
+    <div class="wrap">
+      <div class="hero-img">
+        <img src="banana-joao.jpg" alt="Banana e desenhos do Joãozinho">
+      </div>
+
+      <span class="badge">Áudios Books + PDF</span>
+
       <h1>Algumas obras valem milhões.</h1>
-      <h2>Outras valem o mundo inteiro.</h2>
-      <p>
-        Em algum lugar do mundo, uma banana colada em uma parede foi considerada arte.
-        Anos depois, ela foi revendida por milhões.
+      <div class="subtitle">Outras valem o mundo inteiro.</div>
+
+      <p class="lead">
+        Uma história sobre arte, infância, esperança e os desenhos de um menino de 5 anos chamado João.
       </p>
-      <a href="#participar" class="btn">Conhecer as Histórias do Joãozinho</a>
+
+      <a class="btn" href="#historias">Conhecer as histórias</a>
     </div>
   </header>
 
-  <section class="white">
-    <div class="container">
-      <p class="text">
-        Eu não estou aqui para dizer se isso está certo ou errado.
-      </p>
+  <section>
+    <div class="wrap card">
+      <p class="text">Em algum lugar do mundo, uma banana colada em uma parede foi considerada arte.</p>
+      <p class="text">Anos depois, ela foi revendida por milhões.</p>
+      <p class="text">Eu não estou aqui para dizer se isso está certo ou errado.</p>
+      <p class="text">Mas confesso que aquilo me fez pensar.</p>
 
-      <p class="text">
-        Mas confesso que aquilo me fez pensar.
-      </p>
+      <div class="highlight">Curioso como escolhemos aquilo que tem valor.</div>
 
-      <p class="text">
-        Curioso como escolhemos aquilo que tem valor.
-      </p>
-
-      <p class="text">
-        Porque enquanto algumas obras são exibidas em galerias e observadas por multidões...
-      </p>
-
-      <p class="text">
-        Outras ficam presas na porta da geladeira.
-        Guardadas em gavetas.
-        Esquecidas em caixas de papelão.
-      </p>
-
-      <p class="quote">
-        Sem que ninguém perceba que ali também existe beleza.
-        Que ali também existe arte.
-      </p>
+      <p class="text">Porque enquanto algumas obras são exibidas em galerias e observadas por multidões...</p>
+      <p class="text">Outras ficam presas na porta da geladeira, guardadas em gavetas, esquecidas em caixas de papelão.</p>
+      <p class="text">Sem que ninguém perceba que ali também existe beleza. Que ali também existe arte.</p>
     </div>
   </section>
 
-  <section class="warm">
-    <div class="container">
-      <h2 class="section-title">Este é o Joãozinho.</h2>
+  <section class="soft">
+    <div class="wrap">
+      <h2 class="title">Este é o Joãozinho.</h2>
 
-      <div class="photo-card">
+      <div class="photo">
         <img src="familia-joao.jpg" alt="Joãozinho e família">
       </div>
 
-      <p class="text">
-        Ele tem 5 anos.
-      </p>
+      <p class="text">Ele tem 5 anos.</p>
+      <p class="text">E quer ser artista.</p>
+      <p class="text">Talvez você olhe para os desenhos dele e veja apenas rabiscos. Talvez veja linhas tortas. Talvez veja erros.</p>
+      <p class="text">Eu também vejo.</p>
 
-      <p class="text">
-        E quer ser artista.
-      </p>
+      <div class="highlight">Mas vejo muito mais do que isso.</div>
 
-      <p class="text">
-        Talvez você olhe para os desenhos dele e veja apenas rabiscos.
-        Talvez veja linhas tortas.
-        Talvez veja erros.
-      </p>
-
-      <p class="text">
-        Eu também vejo.
-      </p>
-
-      <p class="text">
-        Mas vejo muito mais do que isso.
-      </p>
-
-      <p class="text">
-        Vejo aquelas mãozinhas ainda aprendendo a escrever.
-        Vejo um lápis sendo segurado com toda a força do mundo.
-        Vejo alguém construindo universos inteiros sem sequer perceber.
-      </p>
-
-      <p class="quote">
-        Porque crianças não criam pensando em resultado.
-        Elas criam porque acreditam.
-      </p>
+      <p class="text">Vejo aquelas mãozinhas ainda aprendendo a escrever.</p>
+      <p class="text">Vejo um lápis sendo segurado com toda a força do mundo.</p>
+      <p class="text">Vejo alguém construindo universos inteiros sem sequer perceber.</p>
     </div>
   </section>
 
-  <section class="white">
-    <div class="container">
-      <p class="text">
-        Às vezes a vida adulta é pesada.
-      </p>
+  <section>
+    <div class="wrap card">
+      <p class="text">Às vezes a vida adulta é pesada.</p>
+      <p class="text">Contas. Problemas. Preocupações. Responsabilidades. Notícias ruins. Ansiedade.</p>
+      <p class="text">Toda família passa por isso. Nós também passamos.</p>
+      <p class="text">Mas existe uma coisa curiosa.</p>
 
-      <p class="text">
-        Contas. Problemas. Preocupações. Responsabilidades.
-        Notícias ruins. Ansiedade.
-      </p>
+      <div class="highlight">Quando o João senta para desenhar, por alguns minutos tudo desaparece.</div>
 
-      <p class="text">
-        Toda família passa por isso.
-        Nós também passamos.
-      </p>
-
-      <p class="text">
-        Mas existe uma coisa curiosa.
-      </p>
-
-      <p class="text">
-        Quando o João senta para desenhar...
-      </p>
-
-      <p class="text">
-        Por alguns minutos tudo desaparece.
-        O silêncio toma conta da casa.
-      </p>
-
-      <p class="text">
-        E parece que existe um mundo paralelo acontecendo na mesa da cozinha.
-      </p>
-
-      <p class="quote">
-        Um mundo onde ainda existem dinossauros.
-        Aventuras. Castelos. Heróis.
-        Amigos imaginários.
-        Um mundo onde ainda existe esperança.
-      </p>
+      <p class="text">O silêncio toma conta da casa.</p>
+      <p class="text">E parece que existe um mundo paralelo acontecendo na mesa da cozinha.</p>
+      <p class="text">Um mundo onde ainda existem dinossauros, aventuras, castelos, heróis e amigos imaginários.</p>
+      <p class="text">Um mundo onde ainda existe esperança.</p>
     </div>
   </section>
 
-  <section class="dark">
-    <div class="container">
-      <p class="text">
-        Talvez seja apenas sentimento de pai.
-      </p>
+  <section class="green">
+    <div class="wrap">
+      <p class="text">Talvez seja apenas sentimento de pai.</p>
+      <p class="text">Eu pensei isso muitas vezes.</p>
+      <p class="text">Mas então comecei a olhar para o mundo à nossa volta.</p>
 
-      <p class="text">
-        Eu pensei isso muitas vezes.
-      </p>
+      <div class="highlight">Violência. Golpes. Mentiras. Ódio. Promessas vazias. Interesses escondidos.</div>
 
-      <p class="text">
-        Mas então comecei a olhar para o mundo à nossa volta.
-      </p>
+      <p class="text">Parece que em todo lugar alguém está tentando tirar vantagem de alguém.</p>
+      <p class="text">E talvez seja por isso que estes desenhos me chamem tanto a atenção.</p>
+      <p class="text">Porque neles eu não encontro nada disso.</p>
 
-      <p class="text">
-        Violência. Golpes. Mentiras. Ódio.
-        Pessoas tentando enganar outras pessoas.
-        Promessas vazias. Interesses escondidos.
-      </p>
-
-      <p class="text">
-        Parece que em todo lugar alguém está tentando tirar vantagem de alguém.
-      </p>
-
-      <p class="text">
-        E talvez seja por isso que estes desenhos me chamem tanto a atenção.
-      </p>
-
-      <p class="text">
-        Porque neles eu não encontro nada disso.
-      </p>
-
-      <p class="quote" style="color:#ffe08a;">
-        Não existe maldade.
-        Não existe ganância.
-        Não existe inveja.
-        Não existe interesse.
-        Existe apenas imaginação.
-      </p>
-
-      <p class="text">
-        Existe apenas inocência.
-        Existe apenas uma criança tentando transformar uma folha em branco em alguma coisa bonita.
-      </p>
-
-      <p class="text">
-        E quanto mais eu olho para estes rabiscos, mais percebo que eles carregam algo que está ficando raro no mundo.
-      </p>
-
-      <p class="quote" style="color:#ffe08a;">
-        Esperança. Humanidade. Simplicidade. Paz.
-      </p>
+      <div class="highlight">Existe apenas imaginação, inocência, esperança, humanidade, simplicidade e paz.</div>
     </div>
   </section>
 
-  <section class="warm">
-    <div class="container">
-      <h2 class="section-title">O Mundo Pelos Olhos do Joãozinho</h2>
+  <section class="rose">
+    <div class="wrap">
+      <h2 class="title">O Mundo Pelos Olhos do Joãozinho</h2>
 
-      <p class="text text-center">
-        Desenhos reais feitos pelo João, cada um carregando um pedacinho da imaginação dele.
-      </p>
+      <p class="text">Desenhos reais feitos pelo João, cada um carregando um pedacinho da imaginação dele.</p>
 
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="indio-joao.jpg" alt="Desenho do índio">
-          <p>O índio aventureiro</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="dino-joao.jpg" alt="Desenho do dinossauro">
-          <p>O dinossauro do João</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="casa-joao.jpg" alt="Desenho da casa">
-          <p>A casinha dos sonhos</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="desenho-joao.jpg" alt="Desenho do João">
-          <p>Um mundo no papel</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="expressao-joao.jpg" alt="Expressão artística do João">
-          <p>Traços cheios de vida</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="negro-joao.jpg" alt="Desenho do João">
-          <p>Personagens com história</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="joao-arminha.jpg" alt="Desenho criativo do João">
-          <p>Aventura de criança</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="arte-joao.jpg" alt="Arte do João">
-          <p>A arte do Joãozinho</p>
-        </div>
+        <div class="art"><img src="indio-joao.jpg" alt=""><p>O Índio Aventureiro</p></div>
+        <div class="art"><img src="dino-joao.jpg" alt=""><p>O Dinossauro do João</p></div>
+        <div class="art"><img src="casa-joao.jpg" alt=""><p>A Casinha dos Sonhos</p></div>
+        <div class="art"><img src="desenho-joao.jpg" alt=""><p>Um Mundo no Papel</p></div>
+        <div class="art"><img src="expressao-joao.jpg" alt=""><p>Traços Cheios de Vida</p></div>
+        <div class="art"><img src="negro-joao.jpg" alt=""><p>Personagens com História</p></div>
+        <div class="art"><img src="joao-arminha.jpg" alt=""><p>Aventura de Criança</p></div>
+        <div class="art"><img src="arte-joao.jpg" alt=""><p>A Arte do Joãozinho</p></div>
       </div>
     </div>
   </section>
 
-  <section class="white">
-    <div class="container">
-      <p class="text">
-        Enquanto organizávamos estes desenhos para esta página, percebemos uma coisa.
-      </p>
+  <section>
+    <div class="wrap card">
+      <p class="text">Enquanto organizávamos estes desenhos para esta página, percebemos uma coisa.</p>
+      <p class="text">Nenhum deles foi criado para impressionar alguém. Nenhum deles foi criado para viralizar. Nenhum deles foi criado para vender.</p>
 
-      <p class="text">
-        Nenhum deles foi criado para impressionar alguém.
-        Nenhum deles foi criado para viralizar.
-        Nenhum deles foi criado para vender.
-      </p>
+      <div class="highlight">O João simplesmente desenha. Porque gosta. Porque sonha. Porque acredita.</div>
 
-      <p class="text">
-        O João não desenha pensando em audiência.
-        Não desenha pensando em dinheiro.
-        Não desenha pensando em reconhecimento.
-      </p>
-
-      <p class="quote">
-        Ele simplesmente desenha.
-        Porque gosta.
-        Porque sonha.
-        Porque acredita.
-      </p>
-
-      <p class="text">
-        Então tivemos uma ideia.
-      </p>
-
-      <p class="text">
-        E se estes desenhos virassem histórias?
-        E se outras crianças também pudessem visitar estes mundos?
-      </p>
-
-      <p class="text">
-        E se a imaginação de um menino de 5 anos pudesse arrancar um sorriso de alguém do outro lado do país?
-      </p>
-
-      <p class="text">
-        Foi assim que nasceram as Histórias do Joãozinho.
-      </p>
+      <p class="text">Então tivemos uma ideia.</p>
+      <p class="text">E se estes desenhos virassem histórias?</p>
+      <p class="text">E se outras crianças também pudessem visitar estes mundos?</p>
+      <p class="text">Foi assim que nasceram as Histórias do Joãozinho.</p>
     </div>
   </section>
 
-  <section class="warm" id="participar">
-    <div class="container">
-      <h2 class="section-title">Áudios Books + PDF</h2>
+  <section class="soft" id="historias">
+    <div class="wrap">
+      <h2 class="title">Áudios Books + PDF</h2>
 
-      <p class="text text-center">
-        Uma coleção com histórias infantis inspiradas nos desenhos reais do Joãozinho.
-      </p>
+      <p class="text">Uma coleção com histórias infantis inspiradas nos desenhos reais do Joãozinho.</p>
 
-      <div class="audio-list">
+      <div class="audio-box">
         <h3>10 histórias da coleção</h3>
 
-        <div>🎧 1. A Banana que Queria Virar Arte</div>
-        <div>🎧 2. O Dinossauro que Morava no Papel</div>
-        <div>🎧 3. A Casinha Onde Cabia o Mundo Inteiro</div>
-        <div>🎧 4. O Índio Guardião das Cores</div>
-        <div>🎧 5. O Menino que Desenhava Esperança</div>
-        <div>🎧 6. A Floresta dos Amigos Imaginários</div>
-        <div>🎧 7. O Herói das Linhas Tortas</div>
-        <div>🎧 8. O Lápis que Não Tinha Medo de Errar</div>
-        <div>🎧 9. O Reino das Folhas Coloridas</div>
-        <div>🎧 10. O Mundo Pelos Olhos do Joãozinho</div>
+        <div class="audio-item">🎧 1. A Banana que Queria Virar Arte</div>
+        <div class="audio-item">🎧 2. O Dinossauro que Morava no Papel</div>
+        <div class="audio-item">🎧 3. A Casinha Onde Cabia o Mundo Inteiro</div>
+        <div class="audio-item">🎧 4. O Índio Guardião das Cores</div>
+        <div class="audio-item">🎧 5. O Menino que Desenhava Esperança</div>
+        <div class="audio-item">🎧 6. A Floresta dos Amigos Imaginários</div>
+        <div class="audio-item">🎧 7. O Herói das Linhas Tortas</div>
+        <div class="audio-item">🎧 8. O Lápis que Não Tinha Medo de Errar</div>
+        <div class="audio-item">🎧 9. O Reino das Folhas Coloridas</div>
+        <div class="audio-item">🎧 10. O Mundo Pelos Olhos do Joãozinho</div>
       </div>
 
       <div class="benefits">
-        <div class="benefit">🎧 10 histórias narradas em áudio</div>
-        <div class="benefit">📖 10 histórias completas em PDF</div>
-        <div class="benefit">🌙 Perfeitas para ouvir antes de dormir</div>
-        <div class="benefit">👨‍👩‍👧‍👦 Momentos especiais entre pais e filhos</div>
-        <div class="benefit">📵 Menos tempo de tela</div>
-        <div class="benefit">✨ Mais imaginação e criatividade</div>
+        <div class="benefit">🎧 10 histórias narradas</div>
+        <div class="benefit">📖 PDFs completos</div>
+        <div class="benefit">🌙 Para ouvir antes de dormir</div>
+        <div class="benefit">📵 Menos telas</div>
+        <div class="benefit">✨ Mais imaginação</div>
+        <div class="benefit">❤️ Mais conexão em família</div>
       </div>
 
-      <p class="text">
-        Os audiobooks foram criados para transformar momentos simples em lembranças especiais.
-      </p>
-
-      <p class="text">
-        Para ouvir antes de dormir, durante uma viagem, no carro, em família ou naquele momento em que você decide trocar alguns minutos de tela por alguns minutos de imaginação.
-      </p>
-
-      <p class="text">
-        Já os PDFs permitem acompanhar cada história, reler quando quiser e transformar a experiência em algo ainda mais especial para as crianças.
-      </p>
+      <p class="text">Os audiobooks foram criados para transformar momentos simples em lembranças especiais.</p>
+      <p class="text">Para ouvir antes de dormir, durante uma viagem, no carro ou naquele momento em que você decide trocar alguns minutos de tela por alguns minutos de imaginação.</p>
+      <p class="text">Já os PDFs permitem acompanhar cada história, reler quando quiser e transformar a experiência em algo ainda mais especial.</p>
     </div>
   </section>
 
-  <section class="dark">
-    <div class="container">
-      <h2 class="section-title">Como participar</h2>
+  <section>
+    <div class="wrap">
+      <div class="price-card">
+        <h2 class="title">Como participar</h2>
 
-      <div class="price-box">
-        <h3>Receba a coleção completa</h3>
+        <p class="text">Receba a coleção completa:</p>
 
         <div class="price">R$ 12,90</div>
 
-        <p>
-          Além de levar estas histórias para sua família, você também ajuda a manter vivo este pequeno universo que estamos construindo.
-        </p>
+        <p class="text"><strong>Áudios Books + PDF</strong> inspirados nos desenhos reais do Joãozinho.</p>
 
-        <p>
-          Sua contribuição ajuda a garantir que nunca faltem lápis de cor, folhas de papel e espaço para que o João continue criando, desenhando e imaginando.
-        </p>
+        <p class="text">Além de levar estas histórias para sua família, você também ajuda a manter vivo este pequeno universo que estamos construindo.</p>
+
+        <p class="text">Sua contribuição ajuda a garantir que nunca faltem lápis de cor, folhas de papel e espaço para que o João continue criando, desenhando e imaginando.</p>
 
         <div class="checkout">
           COLE AQUI O CHECKOUT DA HOTMART
@@ -650,49 +488,23 @@
   </section>
 
   <section class="final">
-    <div class="container">
-      <h2 class="section-title">Todo artista começa de algum lugar.</h2>
+    <div class="wrap">
+      <h2 class="title">Todo artista começa de algum lugar.</h2>
 
-      <p>
-        E este é o começo do Joãozinho.
-      </p>
+      <p>E este é o começo do Joãozinho.</p>
+      <p>Algumas obras valem milhões.</p>
+      <p>Outras valem o mundo inteiro.</p>
 
-      <p>
-        Algumas obras valem milhões.
-      </p>
+      <p>Os desenhos do João talvez nunca estejam em uma galeria. Talvez nunca sejam vendidos em um leilão.</p>
 
-      <p>
-        Outras valem o mundo inteiro.
-      </p>
+      <p>Mas eles já fizeram algo muito especial.</p>
+      <p>Nos lembraram que ainda existem coisas simples capazes de transmitir esperança.</p>
+      <p>E isso vale mais do que podemos medir.</p>
 
-      <p>
-        Os desenhos do João talvez nunca estejam em uma galeria.
-        Talvez nunca sejam vendidos em um leilão.
-      </p>
+      <p>Obrigado por fazer parte desta história.</p>
+      <p>Que Deus abençoe você e sua família. ❤️</p>
 
-      <p>
-        Mas eles já fizeram algo muito especial.
-      </p>
-
-      <p>
-        Nos lembraram que ainda existem coisas simples capazes de transmitir esperança.
-      </p>
-
-      <p>
-        E isso vale mais do que podemos medir.
-      </p>
-
-      <p>
-        Obrigado por fazer parte desta história.
-      </p>
-
-      <p>
-        Que Deus abençoe você e sua família. ❤️
-      </p>
-
-      <p>
-        <strong>João Pedro e família</strong>
-      </p>
+      <p><strong>João Pedro e família</strong></p>
     </div>
   </section>
 
