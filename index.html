@@ -5,21 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>O Mundo Pelos Olhos do Joãozinho</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #fffaf2;
-      --card: #ffffff;
-      --cream: #fff1d8;
-      --soft: #f7ead7;
-      --text: #3f2d24;
-      --muted: #7d6758;
-      --gold: #c89245;
-      --rose: #f5d8cc;
-      --line: #ead8bd;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -31,9 +19,9 @@
     }
 
     body {
-      font-family: "Nunito", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #fafaf8;
+      color: #222;
+      font-family: "Inter", sans-serif;
       line-height: 1.75;
     }
 
@@ -42,254 +30,165 @@
       display: block;
     }
 
-    section {
-      padding: 52px 18px;
-    }
-
-    .wrap {
+    .page {
       max-width: 760px;
       margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid #ddd;
     }
 
     .hero {
-      padding: 18px 16px 58px;
-      text-align: center;
-      background: linear-gradient(180deg, #fff2dc 0%, #fffaf2 100%);
+      padding-top: 34px;
+      text-align: left;
     }
 
-    .hero-img {
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 18px 44px rgba(70, 45, 30, .13);
-      margin-bottom: 30px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #fff;
-      color: var(--gold);
-      font-weight: 900;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: .86rem;
-      box-shadow: 0 8px 22px rgba(70, 45, 30, .08);
-      margin-bottom: 18px;
+    .hero img {
+      border-radius: 18px;
+      margin-bottom: 42px;
     }
 
     h1, h2, h3 {
       font-family: "Fraunces", serif;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #111;
     }
 
     h1 {
-      font-size: clamp(2.45rem, 11vw, 4.4rem);
-      margin-bottom: 10px;
+      font-size: clamp(2.6rem, 12vw, 5rem);
+      text-transform: uppercase;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
     }
 
     .subtitle {
       font-family: "Fraunces", serif;
-      font-size: clamp(1.7rem, 8vw, 3rem);
-      color: var(--gold);
-      margin-bottom: 22px;
+      font-size: clamp(1.8rem, 8vw, 3.2rem);
       line-height: 1.1;
+      color: #333;
+      margin-bottom: 32px;
     }
 
-    .lead {
-      color: var(--muted);
+    h2 {
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 32px;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    p {
       font-size: 1.08rem;
-      max-width: 620px;
-      margin: 0 auto 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--text);
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 24px;
-      border-radius: 999px;
-      font-weight: 900;
-      box-shadow: 0 12px 28px rgba(63,45,36,.18);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(234,216,189,.75);
-      border-radius: 30px;
-      padding: 30px 22px;
-      box-shadow: 0 14px 36px rgba(70, 45, 30, .06);
-    }
-
-    .title {
-      text-align: center;
-      font-size: clamp(2rem, 8vw, 3rem);
-      margin-bottom: 24px;
-    }
-
-    .text {
-      color: var(--muted);
-      font-size: 1.07rem;
+      color: #444;
       margin-bottom: 18px;
     }
 
-    .highlight {
+    .big {
       font-family: "Fraunces", serif;
-      color: var(--text);
-      font-size: clamp(1.45rem, 6vw, 2.2rem);
+      font-size: clamp(1.55rem, 6vw, 2.35rem);
       line-height: 1.25;
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .soft {
-      background: var(--cream);
-    }
-
-    .rose {
-      background: #fff3ee;
-    }
-
-    .green {
-      background: #f4f8ef;
+      color: #111;
+      margin: 36px 0;
     }
 
     .photo {
-      border-radius: 26px;
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 16px 38px rgba(70,45,30,.1);
-      margin: 26px 0;
+      margin: 32px 0;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 26px;
+      gap: 14px;
+      margin-top: 30px;
     }
 
     .art {
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(70,45,30,.07);
+      margin-bottom: 18px;
     }
 
     .art img {
-      height: 165px;
+      height: 170px;
       object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 10px;
     }
 
-    .art p {
-      font-size: .88rem;
-      font-weight: 900;
+    .art span {
+      display: block;
+      font-size: .9rem;
+      color: #555;
       text-align: center;
-      padding: 10px 8px;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
-    .audio-box {
-      background: #fff;
-      border-radius: 28px;
-      padding: 24px 18px;
-      box-shadow: 0 14px 36px rgba(70,45,30,.08);
-      margin: 26px 0;
+    .list {
+      margin-top: 28px;
     }
 
-    .audio-box h3 {
-      text-align: center;
-      font-size: 1.85rem;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .audio-item {
-      padding: 11px 0;
-      border-bottom: 1px solid var(--line);
-      font-weight: 800;
-      color: var(--muted);
-      font-size: .98rem;
-    }
-
-    .audio-item:last-child {
-      border-bottom: 0;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin: 24px 0;
-    }
-
-    .benefit {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px;
-      text-align: center;
-      font-weight: 900;
-      color: var(--text);
-    }
-
-    .price-card {
-      background: #fff;
-      border-radius: 32px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 18px 44px rgba(70,45,30,.1);
-      border: 1px solid var(--line);
+    .list p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #333;
     }
 
     .price {
       font-family: "Fraunces", serif;
-      color: var(--gold);
-      font-size: 3.4rem;
+      font-size: clamp(3.2rem, 15vw, 5.2rem);
+      color: #111;
+      margin: 20px 0;
       line-height: 1;
-      margin: 10px 0 8px;
     }
 
     .checkout {
-      margin-top: 24px;
-      padding: 22px;
-      background: #fff8ea;
-      border: 2px dashed var(--gold);
-      border-radius: 22px;
-      font-weight: 900;
-      color: var(--text);
-    }
-
-    .final {
+      margin-top: 32px;
+      padding: 28px;
+      border: 1px dashed #999;
+      border-radius: 16px;
       text-align: center;
-      background: linear-gradient(180deg, #fffaf2 0%, #fff0d6 100%);
+      color: #444;
+      font-weight: 700;
+      background: #fff;
     }
 
-    .final p {
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin-bottom: 16px;
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .center {
+      text-align: center;
     }
 
     footer {
-      background: var(--text);
-      color: #fff4df;
+      padding: 40px 28px;
       text-align: center;
-      padding: 24px 16px;
-      font-weight: 800;
-      font-size: .92rem;
+      color: #555;
+      font-size: .95rem;
     }
 
-    @media (min-width: 720px) {
+    @media (min-width: 800px) {
+      .page {
+        padding: 0 20px;
+      }
+
       section {
-        padding: 78px 24px;
-      }
-
-      .hero {
-        padding: 34px 24px 82px;
-      }
-
-      .card {
-        padding: 46px 42px;
+        padding: 78px 0;
       }
 
       .gallery {
@@ -297,11 +196,7 @@
       }
 
       .art img {
-        height: 210px;
-      }
-
-      .benefits {
-        grid-template-columns: repeat(3, 1fr);
+        height: 190px;
       }
     }
   </style>
@@ -309,204 +204,403 @@
 
 <body>
 
-  <header class="hero">
-    <div class="wrap">
-      <div class="hero-img">
-        <img src="banana-joao.jpg" alt="Banana e desenhos do Joãozinho">
-      </div>
+  <main class="page">
 
-      <span class="badge">Áudios Books + PDF</span>
+    <section class="hero">
+      <img src="banana-joao.jpg" alt="Banana e desenhos do Joãozinho">
 
       <h1>Algumas obras valem milhões.</h1>
-      <div class="subtitle">Outras valem o mundo inteiro.</div>
 
-      <p class="lead">
-        Uma história sobre arte, infância, esperança e os desenhos de um menino de 5 anos chamado João.
+      <div class="subtitle">
+        Outras valem o mundo inteiro.
+      </div>
+
+      <p>
+        Em algum lugar do mundo, uma banana colada em uma parede foi considerada arte.
       </p>
 
-      <a class="btn" href="#historias">Conhecer as histórias</a>
-    </div>
-  </header>
+      <p>
+        Anos depois, ela foi revendida por milhões.
+      </p>
 
-  <section>
-    <div class="wrap card">
-      <p class="text">Em algum lugar do mundo, uma banana colada em uma parede foi considerada arte.</p>
-      <p class="text">Anos depois, ela foi revendida por milhões.</p>
-      <p class="text">Eu não estou aqui para dizer se isso está certo ou errado.</p>
-      <p class="text">Mas confesso que aquilo me fez pensar.</p>
+      <p>
+        Eu não estou aqui para dizer se isso está certo ou errado.
+      </p>
 
-      <div class="highlight">Curioso como escolhemos aquilo que tem valor.</div>
+      <p>
+        Mas confesso que aquilo me fez pensar.
+      </p>
 
-      <p class="text">Porque enquanto algumas obras são exibidas em galerias e observadas por multidões...</p>
-      <p class="text">Outras ficam presas na porta da geladeira, guardadas em gavetas, esquecidas em caixas de papelão.</p>
-      <p class="text">Sem que ninguém perceba que ali também existe beleza. Que ali também existe arte.</p>
-    </div>
-  </section>
+      <p class="big">
+        Curioso como escolhemos aquilo que tem valor.
+      </p>
 
-  <section class="soft">
-    <div class="wrap">
-      <h2 class="title">Este é o Joãozinho.</h2>
+      <p>
+        Porque enquanto algumas obras são exibidas em galerias e observadas por multidões...
+      </p>
+
+      <p>
+        Outras ficam presas na porta da geladeira.
+        Guardadas em gavetas.
+        Esquecidas em caixas de papelão.
+      </p>
+
+      <p>
+        Sem que ninguém perceba que ali também existe beleza.
+        Que ali também existe arte.
+      </p>
+    </section>
+
+    <section>
+      <h2>Este é o Joãozinho.</h2>
 
       <div class="photo">
         <img src="familia-joao.jpg" alt="Joãozinho e família">
       </div>
 
-      <p class="text">Ele tem 5 anos.</p>
-      <p class="text">E quer ser artista.</p>
-      <p class="text">Talvez você olhe para os desenhos dele e veja apenas rabiscos. Talvez veja linhas tortas. Talvez veja erros.</p>
-      <p class="text">Eu também vejo.</p>
+      <p>
+        Ele tem 5 anos.
+      </p>
 
-      <div class="highlight">Mas vejo muito mais do que isso.</div>
+      <p>
+        E quer ser artista.
+      </p>
 
-      <p class="text">Vejo aquelas mãozinhas ainda aprendendo a escrever.</p>
-      <p class="text">Vejo um lápis sendo segurado com toda a força do mundo.</p>
-      <p class="text">Vejo alguém construindo universos inteiros sem sequer perceber.</p>
-    </div>
-  </section>
+      <p>
+        Talvez você olhe para os desenhos dele e veja apenas rabiscos.
+      </p>
 
-  <section>
-    <div class="wrap card">
-      <p class="text">Às vezes a vida adulta é pesada.</p>
-      <p class="text">Contas. Problemas. Preocupações. Responsabilidades. Notícias ruins. Ansiedade.</p>
-      <p class="text">Toda família passa por isso. Nós também passamos.</p>
-      <p class="text">Mas existe uma coisa curiosa.</p>
+      <p>
+        Talvez veja linhas tortas.
+      </p>
 
-      <div class="highlight">Quando o João senta para desenhar, por alguns minutos tudo desaparece.</div>
+      <p>
+        Talvez veja erros.
+      </p>
 
-      <p class="text">O silêncio toma conta da casa.</p>
-      <p class="text">E parece que existe um mundo paralelo acontecendo na mesa da cozinha.</p>
-      <p class="text">Um mundo onde ainda existem dinossauros, aventuras, castelos, heróis e amigos imaginários.</p>
-      <p class="text">Um mundo onde ainda existe esperança.</p>
-    </div>
-  </section>
+      <p>
+        Eu também vejo.
+      </p>
 
-  <section class="green">
-    <div class="wrap">
-      <p class="text">Talvez seja apenas sentimento de pai.</p>
-      <p class="text">Eu pensei isso muitas vezes.</p>
-      <p class="text">Mas então comecei a olhar para o mundo à nossa volta.</p>
+      <p class="big">
+        Mas vejo muito mais do que isso.
+      </p>
 
-      <div class="highlight">Violência. Golpes. Mentiras. Ódio. Promessas vazias. Interesses escondidos.</div>
+      <p>
+        Vejo aquelas mãozinhas ainda aprendendo a escrever.
+      </p>
 
-      <p class="text">Parece que em todo lugar alguém está tentando tirar vantagem de alguém.</p>
-      <p class="text">E talvez seja por isso que estes desenhos me chamem tanto a atenção.</p>
-      <p class="text">Porque neles eu não encontro nada disso.</p>
+      <p>
+        Vejo um lápis sendo segurado com toda a força do mundo.
+      </p>
 
-      <div class="highlight">Existe apenas imaginação, inocência, esperança, humanidade, simplicidade e paz.</div>
-    </div>
-  </section>
+      <p>
+        Vejo alguém construindo universos inteiros sem sequer perceber.
+      </p>
+    </section>
 
-  <section class="rose">
-    <div class="wrap">
-      <h2 class="title">O Mundo Pelos Olhos do Joãozinho</h2>
+    <section>
+      <p>
+        Às vezes a vida adulta é pesada.
+      </p>
 
-      <p class="text">Desenhos reais feitos pelo João, cada um carregando um pedacinho da imaginação dele.</p>
+      <p>
+        Contas. Problemas. Preocupações. Responsabilidades.
+      </p>
+
+      <p>
+        Notícias ruins. Ansiedade.
+      </p>
+
+      <p>
+        Toda família passa por isso.
+      </p>
+
+      <p>
+        Nós também passamos.
+      </p>
+
+      <p class="big">
+        Mas existe uma coisa curiosa.
+      </p>
+
+      <p>
+        Quando o João senta para desenhar...
+      </p>
+
+      <p>
+        Por alguns minutos tudo desaparece.
+      </p>
+
+      <p>
+        O silêncio toma conta da casa.
+      </p>
+
+      <p>
+        E parece que existe um mundo paralelo acontecendo na mesa da cozinha.
+      </p>
+
+      <p>
+        Um mundo onde ainda existem dinossauros.
+        Aventuras. Castelos. Heróis.
+        Amigos imaginários.
+      </p>
+
+      <p>
+        Um mundo onde ainda existe esperança.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Talvez seja apenas sentimento de pai.
+      </p>
+
+      <p>
+        Eu pensei isso muitas vezes.
+      </p>
+
+      <p>
+        Mas então comecei a olhar para o mundo à nossa volta.
+      </p>
+
+      <p class="big">
+        Violência. Golpes. Mentiras. Ódio.
+        Promessas vazias. Interesses escondidos.
+      </p>
+
+      <p>
+        Parece que em todo lugar alguém está tentando tirar vantagem de alguém.
+      </p>
+
+      <p>
+        E talvez seja por isso que estes desenhos me chamem tanto a atenção.
+      </p>
+
+      <p>
+        Porque neles eu não encontro nada disso.
+      </p>
+
+      <p class="big">
+        Existe apenas imaginação, inocência, esperança, humanidade, simplicidade e paz.
+      </p>
+
+      <p>
+        Existe apenas uma criança tentando transformar uma folha em branco em alguma coisa bonita.
+      </p>
+    </section>
+
+    <section>
+      <h2>O mundo pelos olhos do Joãozinho</h2>
+
+      <p>
+        Desenhos reais feitos pelo João, cada um carregando um pedacinho da imaginação dele.
+      </p>
 
       <div class="gallery">
-        <div class="art"><img src="indio-joao.jpg" alt=""><p>O Índio Aventureiro</p></div>
-        <div class="art"><img src="dino-joao.jpg" alt=""><p>O Dinossauro do João</p></div>
-        <div class="art"><img src="casa-joao.jpg" alt=""><p>A Casinha dos Sonhos</p></div>
-        <div class="art"><img src="desenho-joao.jpg" alt=""><p>Um Mundo no Papel</p></div>
-        <div class="art"><img src="expressao-joao.jpg" alt=""><p>Traços Cheios de Vida</p></div>
-        <div class="art"><img src="negro-joao.jpg" alt=""><p>Personagens com História</p></div>
-        <div class="art"><img src="joao-arminha.jpg" alt=""><p>Aventura de Criança</p></div>
-        <div class="art"><img src="arte-joao.jpg" alt=""><p>A Arte do Joãozinho</p></div>
-      </div>
-    </div>
-  </section>
+        <div class="art">
+          <img src="indio-joao.jpg" alt="Desenho do índio">
+          <span>O Índio Aventureiro</span>
+        </div>
 
-  <section>
-    <div class="wrap card">
-      <p class="text">Enquanto organizávamos estes desenhos para esta página, percebemos uma coisa.</p>
-      <p class="text">Nenhum deles foi criado para impressionar alguém. Nenhum deles foi criado para viralizar. Nenhum deles foi criado para vender.</p>
+        <div class="art">
+          <img src="dino-joao.jpg" alt="Desenho do dinossauro">
+          <span>O Dinossauro do João</span>
+        </div>
 
-      <div class="highlight">O João simplesmente desenha. Porque gosta. Porque sonha. Porque acredita.</div>
+        <div class="art">
+          <img src="casa-joao.jpg" alt="Desenho da casa">
+          <span>A Casinha dos Sonhos</span>
+        </div>
 
-      <p class="text">Então tivemos uma ideia.</p>
-      <p class="text">E se estes desenhos virassem histórias?</p>
-      <p class="text">E se outras crianças também pudessem visitar estes mundos?</p>
-      <p class="text">Foi assim que nasceram as Histórias do Joãozinho.</p>
-    </div>
-  </section>
+        <div class="art">
+          <img src="desenho-joao.jpg" alt="Desenho do João">
+          <span>Um Mundo no Papel</span>
+        </div>
 
-  <section class="soft" id="historias">
-    <div class="wrap">
-      <h2 class="title">Áudios Books + PDF</h2>
+        <div class="art">
+          <img src="expressao-joao.jpg" alt="Expressão artística do João">
+          <span>Traços Cheios de Vida</span>
+        </div>
 
-      <p class="text">Uma coleção com histórias infantis inspiradas nos desenhos reais do Joãozinho.</p>
+        <div class="art">
+          <img src="negro-joao.jpg" alt="Desenho do João">
+          <span>Personagens com História</span>
+        </div>
 
-      <div class="audio-box">
-        <h3>10 histórias da coleção</h3>
+        <div class="art">
+          <img src="joao-arminha.jpg" alt="Desenho criativo do João">
+          <span>Aventura de Criança</span>
+        </div>
 
-        <div class="audio-item">🎧 1. A Banana que Queria Virar Arte</div>
-        <div class="audio-item">🎧 2. O Dinossauro que Morava no Papel</div>
-        <div class="audio-item">🎧 3. A Casinha Onde Cabia o Mundo Inteiro</div>
-        <div class="audio-item">🎧 4. O Índio Guardião das Cores</div>
-        <div class="audio-item">🎧 5. O Menino que Desenhava Esperança</div>
-        <div class="audio-item">🎧 6. A Floresta dos Amigos Imaginários</div>
-        <div class="audio-item">🎧 7. O Herói das Linhas Tortas</div>
-        <div class="audio-item">🎧 8. O Lápis que Não Tinha Medo de Errar</div>
-        <div class="audio-item">🎧 9. O Reino das Folhas Coloridas</div>
-        <div class="audio-item">🎧 10. O Mundo Pelos Olhos do Joãozinho</div>
-      </div>
-
-      <div class="benefits">
-        <div class="benefit">🎧 10 histórias narradas</div>
-        <div class="benefit">📖 PDFs completos</div>
-        <div class="benefit">🌙 Para ouvir antes de dormir</div>
-        <div class="benefit">📵 Menos telas</div>
-        <div class="benefit">✨ Mais imaginação</div>
-        <div class="benefit">❤️ Mais conexão em família</div>
-      </div>
-
-      <p class="text">Os audiobooks foram criados para transformar momentos simples em lembranças especiais.</p>
-      <p class="text">Para ouvir antes de dormir, durante uma viagem, no carro ou naquele momento em que você decide trocar alguns minutos de tela por alguns minutos de imaginação.</p>
-      <p class="text">Já os PDFs permitem acompanhar cada história, reler quando quiser e transformar a experiência em algo ainda mais especial.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="price-card">
-        <h2 class="title">Como participar</h2>
-
-        <p class="text">Receba a coleção completa:</p>
-
-        <div class="price">R$ 12,90</div>
-
-        <p class="text"><strong>Áudios Books + PDF</strong> inspirados nos desenhos reais do Joãozinho.</p>
-
-        <p class="text">Além de levar estas histórias para sua família, você também ajuda a manter vivo este pequeno universo que estamos construindo.</p>
-
-        <p class="text">Sua contribuição ajuda a garantir que nunca faltem lápis de cor, folhas de papel e espaço para que o João continue criando, desenhando e imaginando.</p>
-
-        <div class="checkout">
-          COLE AQUI O CHECKOUT DA HOTMART
+        <div class="art">
+          <img src="arte-joao.jpg" alt="Arte do João">
+          <span>A Arte do Joãozinho</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="final">
-    <div class="wrap">
-      <h2 class="title">Todo artista começa de algum lugar.</h2>
+    <section>
+      <p>
+        Enquanto organizávamos estes desenhos para esta página, percebemos uma coisa.
+      </p>
 
-      <p>E este é o começo do Joãozinho.</p>
-      <p>Algumas obras valem milhões.</p>
-      <p>Outras valem o mundo inteiro.</p>
+      <p>
+        Nenhum deles foi criado para impressionar alguém.
+      </p>
 
-      <p>Os desenhos do João talvez nunca estejam em uma galeria. Talvez nunca sejam vendidos em um leilão.</p>
+      <p>
+        Nenhum deles foi criado para viralizar.
+      </p>
 
-      <p>Mas eles já fizeram algo muito especial.</p>
-      <p>Nos lembraram que ainda existem coisas simples capazes de transmitir esperança.</p>
-      <p>E isso vale mais do que podemos medir.</p>
+      <p>
+        Nenhum deles foi criado para vender.
+      </p>
 
-      <p>Obrigado por fazer parte desta história.</p>
-      <p>Que Deus abençoe você e sua família. ❤️</p>
+      <p class="big">
+        O João simplesmente desenha.
+        Porque gosta.
+        Porque sonha.
+        Porque acredita.
+      </p>
 
-      <p><strong>João Pedro e família</strong></p>
-    </div>
-  </section>
+      <p>
+        Então tivemos uma ideia.
+      </p>
+
+      <p>
+        E se estes desenhos virassem histórias?
+      </p>
+
+      <p>
+        E se outras crianças também pudessem visitar estes mundos?
+      </p>
+
+      <p>
+        Foi assim que nasceram as Histórias do Joãozinho.
+      </p>
+    </section>
+
+    <section id="historias">
+      <h2>Histórias incluídas</h2>
+
+      <div class="list">
+        <p>🦖 O Dinossauro que Queria Voar</p>
+        <p>🏠 A Casinha Amarela</p>
+        <p>🚂 O Trem das Cores</p>
+        <p>⭐ O Menino que Conversava com as Estrelas</p>
+        <p>🌳 A Árvore dos Segredos</p>
+        <p>🐶 O Cachorrinho Explorador</p>
+        <p>🌈 A Cidade dos Lápis de Cor</p>
+        <p>🚀 A Viagem ao Planeta Azul</p>
+        <p>🦁 O Leão que Tinha Medo do Escuro</p>
+        <p>🌙 A Última Estrela da Noite</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>A coleção inclui</h2>
+
+      <div class="list">
+        <p>🎧 10 histórias narradas em áudio</p>
+        <p>📖 10 histórias completas em PDF</p>
+        <p>🌙 Histórias para ouvir antes de dormir</p>
+        <p>👨‍👩‍👧‍👦 Momentos especiais entre pais e filhos</p>
+        <p>📵 Menos tempo de tela</p>
+        <p>✨ Mais imaginação e criatividade</p>
+        <p>❤️ Histórias inspiradas nos desenhos reais do Joãozinho</p>
+      </div>
+
+      <p>
+        Os audiobooks foram criados para transformar momentos simples em lembranças especiais.
+      </p>
+
+      <p>
+        Para ouvir antes de dormir, durante uma viagem, no carro, em família ou naquele momento em que você decide trocar alguns minutos de tela por alguns minutos de imaginação.
+      </p>
+
+      <p>
+        Já os PDFs permitem acompanhar cada história, reler quando quiser e transformar a experiência em algo ainda mais especial.
+      </p>
+    </section>
+
+    <section class="center">
+      <h2>Como participar</h2>
+
+      <p>
+        Receba acesso completo à coleção:
+      </p>
+
+      <div class="price">
+        R$ 12,90
+      </div>
+
+      <p>
+        Áudios Books + PDF inspirados nos desenhos reais do Joãozinho.
+      </p>
+
+      <p>
+        Além de levar estas histórias para sua família, você também ajuda a manter vivo este pequeno universo que estamos construindo.
+      </p>
+
+      <p>
+        Sua contribuição ajuda a garantir que nunca faltem lápis de cor, folhas de papel e espaço para que o João continue criando, desenhando e imaginando.
+      </p>
+
+      <div class="checkout">
+        COLE AQUI O CHECKOUT DA HOTMART
+      </div>
+    </section>
+
+    <section class="center">
+      <h2>Todo artista começa de algum lugar.</h2>
+
+      <p>
+        E este é o começo do Joãozinho.
+      </p>
+
+      <p>
+        Algumas obras valem milhões.
+      </p>
+
+      <p>
+        Outras valem o mundo inteiro.
+      </p>
+
+      <p>
+        Os desenhos do João talvez nunca estejam em uma galeria.
+      </p>
+
+      <p>
+        Talvez nunca sejam vendidos em um leilão.
+      </p>
+
+      <p>
+        Mas eles já fizeram algo muito especial.
+      </p>
+
+      <p>
+        Nos lembraram que ainda existem coisas simples capazes de transmitir esperança.
+      </p>
+
+      <p>
+        E isso vale mais do que podemos medir.
+      </p>
+
+      <p>
+        Obrigado por fazer parte desta história.
+      </p>
+
+      <p>
+        Que Deus abençoe você e sua família. ❤️
+      </p>
+
+      <p>
+        <strong>João Pedro e família</strong>
+      </p>
+    </section>
+
+  </main>
 
   <footer>
     O Mundo Pelos Olhos do Joãozinho — Áudios Books + PDF
